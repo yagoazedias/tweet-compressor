@@ -3,6 +3,7 @@
 	<title>tweet-compressor</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="import" href="bower_components/made-with-love/made-with-love.html">
 </head>
 
 <body>
@@ -38,17 +39,18 @@
 			</form>
 		</div>
 		<button type="button" data-clipboard-target="#tweet-compressed" class="btn btn-primary center-block">Copiar para Área de Trabalho</button>
+		<center><made-with-love id="made-with-love" name="Yago Azedias" url="https://github.com/yagoazedias" color="#000000"></made-with-love></center>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
 	<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"</script>
 	<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"</script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" </script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <script src="js/app/models/Tweet.js"></script>
   <script src="js/app/controllers/TweetController.js"></script>
-  <script src="dist/clipboard.min.js"></script>
   <script>
   	let tweetController = new TweetController();
-  	new Clipboard('.btn');
   </script>
   
 </body>

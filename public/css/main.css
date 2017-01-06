@@ -1,0 +1,19 @@
+#main {
+	margin-top: 10px;
+	background-color: #ffffff;
+	width: 800px;
+	height: 400px;
+	padding-top: 10px;
+}
+
+#original-tweet-number, #compressed-tweet-number  {
+		float: right;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-group {
+	max-width: 500px;
+}

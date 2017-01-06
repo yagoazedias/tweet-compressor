@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>tweet-compressor</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+	<div id="main" class="container">
+		<h1 class="text-center">Tweet Compressor</h1>
+		<div class="row">
+			<form>
+				<div class="form-group center-block">
+					<label for="tweet-original">Tweet Original</label>
+					<p id="original-tweet-number">140</p>
+					<textarea 
+
+            oninput="tweetController.addTweetCompressed();
+             tweetController.updateTweetSizeNumber()"
+            onfocus="tweetController.addTweetCompressed()
+            tweetController.updateTweetSizeNumber()"
+            onkeypress="tweetController.addTweetCompressed()
+            tweetController.updateTweetSizeNumber()"
+            onkeydown="tweetController.addTweetCompressed()
+            tweetController.updateTweetSizeNumber()"
+
+					placeholder="Escreva o tweet original aqui..." class="form-control" id="tweet-original" rows="3" autocomplete="off" autofocus="true" ></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<form>
+				<div class="form-group center-block">
+					<label for="tweet-compressed">Tweet Compressed</label>
+					<p id="compressed-tweet-number">140</p>
+					<textarea placeholder="Ele irá aparecer comprimido aqui \o/" readonly class="form-control" id="tweet-compressed" rows="3" autofocus="true" ></textarea>
+				</div>
+			</form>
+		</div>
+		<button type="button" data-clipboard-target="#tweet-compressed" class="btn btn-primary center-block">Copiar para Área de Trabalho</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
+	<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"</script>
+	<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" </script>
+  <script src="js/app/models/Tweet.js"></script>
+  <script src="js/app/controllers/TweetController.js"></script>
+  <script src="dist/clipboard.min.js"></script>
+  <script>
+  	let tweetController = new TweetController();
+  	new Clipboard('.btn');
+  </script>
+  
+</body>
+</html>

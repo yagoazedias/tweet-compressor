@@ -10,9 +10,10 @@ load('models')
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 3000))
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, function(){
-  console.log("Server's running on port 3000.");
+app.listen(app.get('port'), function(){
+  console.log("Server's running localy on port 5000.");
 });
